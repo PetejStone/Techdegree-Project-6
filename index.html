@@ -18,12 +18,14 @@
 
   </head>
   <body>
-    <video>
-    <source src="video/video.mp4" type="video/mp4">
-    <source src="video/video.ogg" type="video/ogg">
-    <track label="English" kind="subtitles" src="subtitles/subtitles.vtt"
-    srclang="en">
-    </video>
+    <div class="videoPlayer">
+      <video>
+      <source src="video/video.mp4" type="video/mp4">
+      <source src="video/video.ogg" type="video/ogg">
+      <track label="English" kind="subtitles" src="subtitles/subtitles.vtt"
+      srclang="en">
+      </video>
+    </div>
     <script>
       $('video').mediaelementplayer({
         features: ['playpause', 'tracks', 'progress'],
