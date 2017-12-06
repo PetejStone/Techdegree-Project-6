@@ -3,3 +3,11 @@
   max-width: 1000px;
   margin:0 auto;
 }
+
+.subtitles {
+  padding-top: 2em;
+  line-height: 2em;
+  font-size: 1.2em;
+  margin: 0 auto;
+  max-width: 1000px;
+}
