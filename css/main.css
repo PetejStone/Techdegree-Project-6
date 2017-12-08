@@ -35,8 +35,12 @@ p:hover {
   cursor: pointer;
 }
 
-@media (min-width: 800px) {
-  .subtitles {
-    width: 70%;
+@media (min-width: 768px) {
+  p {
+    font-size: .9em;
   }
+}
+
+.subtitles {
+  max-width: 800px;
 }
