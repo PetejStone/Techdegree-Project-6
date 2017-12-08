@@ -45,6 +45,8 @@ p:hover {
   max-width: 800px;
 }
 
+
+/* Video Player modifications*/
 .mejs__controls:not([style*='display: none']) {
     background: rgba(255, 0, 0, 0.7);
     background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
