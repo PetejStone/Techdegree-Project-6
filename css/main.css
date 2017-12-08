@@ -15,10 +15,28 @@ body {
   line-height: 2em;
   font-size: 1.2em;
   margin: 0 auto;
+  margin-top: 1em;
   max-width: 800px;
+  background-color: #e2f3a3;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 1em;
+  border-radius: 20px;
+
+
 }
 
 p {
   display: inline;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .subtitles {
+    width: 70%;
+  }
 }
