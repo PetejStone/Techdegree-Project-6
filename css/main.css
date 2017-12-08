@@ -44,3 +44,15 @@ p:hover {
 .subtitles {
   max-width: 800px;
 }
+
+.mejs__controls:not([style*='display: none']) {
+    background: rgba(255, 0, 0, 0.7);
+    background: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+    background-color: green;
+}
+
+.mejs__overlay-play {
+    cursor: pointer;
+    background-color: #99ee90;
+}
