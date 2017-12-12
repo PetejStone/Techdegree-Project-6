@@ -1,10 +1,14 @@
+ document.addEventListener('DOMContentLoaded', () => { 
 
 let i = 0;
 let subtitles = document.getElementsByClassName("mejs__time-float-current");
 let pCurrent = document.querySelectorAll('p');
-let video = document.getElementById('video');
+let video = document.getElementsByTagName('video')[0];
 
-////////Explanation of code for future reference////////
+video.addEventListener('timeupdate', (event) => {
+  return video.currentTime;
+})
+////////Explanation of code for future ////////
 
 // i = 0, if the current paragraph element is < the total # of paragraphs, keep
 // looping. 'timeupdate' added to keep track of time. If the video's current
@@ -16,7 +20,7 @@ let video = document.getElementById('video');
 
 for (let i = 0; i < pCurrent.length; video.currentTime < pCurrent[i].getAttribute('data-end') && video.currentTime > pCurrent[i].getAttribute('data-start'), i += 1 ){
   video.addEventListener('timeupdate', ()=> {
-    if (video.currentTime < pCurrent[i].getAttribute('data-end') && video.currentTime > pCurrent[i].getAttribute('data-start')) {
+    if (video.currentTime < pCurrent[i].getAttribute('data-end') && video.currentTime >= pCurrent[i].getAttribute('data-start')) {
       pCurrent[i].style.color = 'red';
     } else pCurrent[i].style.color = 'black';
 
@@ -27,7 +31,8 @@ for (let i = 0; i < pCurrent.length; video.currentTime < pCurrent[i].getAttribut
 // browser is listeneing for a click. If user clicks,
 // then the video's current time will = that element's 'data start' position.
 
-for (let i = 0; i <pCurrent.length; i += 1)
+for (let i = 0; i <pCurrent.length; i += 1) {
   pCurrent[i].addEventListener('click', () => {
     video.currentTime = pCurrent[i].getAttribute('data-start');
-  })
+  })}
+})
