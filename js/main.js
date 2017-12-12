@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', () => { 
+ document.addEventListener('DOMContentLoaded', () => {
 
 let i = 0;
 let subtitles = document.getElementsByClassName("mejs__time-float-current");
@@ -13,7 +13,7 @@ video.addEventListener('timeupdate', (event) => {
 // i = 0, if the current paragraph element is < the total # of paragraphs, keep
 // looping. 'timeupdate' added to keep track of time. If the video's current
 // time is < that the current 'p' element's end time (per attribute retrieval),
-// and is < than that current element's start time, then add one to the pCurrent
+// and is > than that current element's start time, then add one to the pCurrent
 // variable, which moves to the next line in the transcript. The same code is
 // added to the "if" condition.  If it is between those times, style the current
 // element red, if it is not true, change it back to black!
